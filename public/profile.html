@@ -22,13 +22,13 @@
     <script defer src="/js/header.js"></script>
     <script defer src="/js/profile.js"></script>
 
-    <title>Rockstar 2.0</title>
+    <title>Vanta Visual</title>
 </head>
 <body>
 <header>
     <div class="logo">
         <a href="/" class="logo-text">
-            <img src="/img/logo.png" alt="" data-lazy="false" fetchpriority="high">Rockstar
+            <img src="/img/logo.png" alt="" data-lazy="false" fetchpriority="high">Vanta Visual
         </a>
     </div>
 
@@ -47,151 +47,91 @@
 </header>
 
 <main>
+    <section class="profile-hero">
+        <h1 class="hero-title">
+            Улучшаем игру с<br>Vanta Visual
+        </h1>
+        <p class="hero-subtitle">Управляйте своим аккаунтом и настройками</p>
+    </section>
+
     <section class="profile">
-        <div class="box animate-on-scroll">
-            <div class="border up">
-                <div class="upper-info">
-                    <div class="ava-wrapper" id="wrapper">
-                        <img class="avatar" src="/img/ava.jpg" alt="">
+        <div class="profile-card animate-on-scroll">
+            <div class="card-header">
+                <div class="user-info">
+                    <div class="avatar-large">
+                        <img src="/img/ava.jpg" alt="Avatar">
                     </div>
-
-                    <div class="text">
-                        <p class="name"></p>
-                        <p class="uid"><i class="ph-bold ph-user-focus"></i><span class="id"></span></p>
+                    <div class="user-details">
+                        <h2 class="user-name"></h2>
+                        <p class="user-id"><i class="ph-bold ph-user-focus"></i> ID: <span class="id"></span></p>
+                        <span class="user-role">Пользователь</span>
                     </div>
                 </div>
-                <div class="highlight quit">
-                    <span class="icon"><i class="ph-bold ph-sign-out"></i></span>Выйти
-                </div>
+                <button class="btn-logout" id="logout-btn">
+                    <i class="ph-bold ph-sign-out"></i> Выйти
+                </button>
             </div>
 
-            <div class="border down ww">
-                <div class="buttons">
-                    <div class="highlight" id="download-btn">
-                        <span class="icon"><i class="ph ph-cloud-arrow-down"></i></span>Скачать лоадер
+            <div class="card-body">
+                <div class="info-row">
+                    <div class="info-label">
+                        <i class="ph-bold ph-envelope"></i>
+                        <span>Почта</span>
                     </div>
-                    <div class="highlight" id="enter-key-btn">
-                        <span class="icon"><i class="ph ph-key"></i></span>Ввести ключ
-                    </div>
-                    <div class="highlight" id="extend-subscription-btn">
-                        <span class="icon"><i class="ph ph-clock-countdown"></i></span>Продлить подписку
+                    <div class="info-value">
+                        <span class="email"></span>
                     </div>
                 </div>
-            </div>
 
-            <div class="border down">
-                <div class="user-sub">
-                    <div class="till">Роль</div>
-                    <div class="till"><span class="role"></span></div>
-                </div>
-            </div>
-
-            <div class="border down">
-                <div class="user-sub">
-                    <div class="till">Почта</div>
-                    <div class="till"><span class="email"></span></div>
-                </div>
-            </div>
-
-            <div class="border down">
-                <div class="user-sub">
-                    <div class="till">RAM (МБ)</div>
-                    <div class="till ram-till">
-                        <span class="ram-edit-link" id="ram-edit-btn">Изменить</span>
-                        <span class="ram-value" id="ram-display"></span>
+                <div class="info-row">
+                    <div class="info-label">
+                        <i class="ph-bold ph-calendar"></i>
+                        <span>Дата регистрации</span>
+                    </div>
+                    <div class="info-value">
+                        <span class="creation"></span>
                     </div>
                 </div>
-            </div>
 
-            <div class="border down">
-                <div class="user-sub">
-                    <div class="till">Google Auth</div>
-                    <div class="till twofa-till">
-                        <span class="ram-edit-link" id="twofa-btn">Привязать</span>
+                <div class="info-row">
+                    <div class="info-label">
+                        <i class="ph-bold ph-shield-check"></i>
+                        <span>Google Authenticator</span>
+                    </div>
+                    <div class="info-value">
                         <span class="twofa-status" id="twofa-status">Не привязан</span>
+                        <button class="btn-link" id="twofa-btn">Привязать</button>
                     </div>
-                </div>
-            </div>
-
-            <div class="border down" id="creation-row">
-                <div class="user-sub">
-                    <div class="till">Создание аккаунта</div>
-                    <div class="till"><span class="creation"></span></div>
                 </div>
             </div>
         </div>
 
-        <div class="box down animate-on-scroll">
-            <div class="">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Название</th>
-                        <th>Дата</th>
-                        <th class="action-th"></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="prd-name">Фантайм конфиг для pvp</td>
-                        <td class="date">21.04.2025</td>
-                        <td class="action">
-                            <a href="javascript:void(0);" onclick="toggleMenu(this)"><i class="ph-fill ph-dots-three-outline actions-trigger"></i></a>
-                            <div class="dropdown-menu hide">
-                                <a href="#">Переименовать</a>
-                                <a href="#">Поделиться</a>
-                                <a href="#">Опубликовать</a>
-                                <a href="#">Удалить</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="prd-name">Фантайм конфиг для pvp</td>
-                        <td class="date">21.04.2025</td>
-                        <td class="action">
-                            <a href="javascript:void(0);" onclick="toggleMenu(this)"><i class="ph-fill ph-dots-three-outline actions-trigger"></i></a>
-                            <div class="dropdown-menu hide">
-                                <a href="#">Переименовать</a>
-                                <a href="#">Поделиться</a>
-                                <a href="#">Опубликовать</a>
-                                <a href="#">Удалить</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="prd-name">Фантайм конфиг для pvp</td>
-                        <td class="date">21.04.2025</td>
-                        <td class="action">
-                            <a href="javascript:void(0);" onclick="toggleMenu(this)"><i class="ph-fill ph-dots-three-outline actions-trigger"></i></a>
-                            <div class="dropdown-menu hide">
-                                <a href="#">Переименовать</a>
-                                <a href="#">Поделиться</a>
-                                <a href="#">Опубликовать</a>
-                                <a href="#">Удалить</a>
-                            </div>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-                <div class="non">
-                    <span class="icon"><i class="ph-fill ph-cloud"></i></span>
-                    <h1>Пустовато...</h1>
-                    <p>У вас нет конфигов. Для создания конфига, <br> зайдите в клиент и создайте его</p>
-                </div>
+        <div class="profile-card animate-on-scroll">
+            <div class="card-header">
+                <h3>Действия</h3>
             </div>
-
-            <div class="pagination">
-                <button class="page-btn active">1</button>
-                <button class="page-btn">2</button>
-                <button class="page-btn">3</button>
+            <div class="card-actions">
+                <button class="action-btn" id="download-btn">
+                    <i class="ph-bold ph-cloud-arrow-down"></i>
+                    <span>Скачать лоадер</span>
+                </button>
+                <button class="action-btn" id="enter-key-btn">
+                    <i class="ph-bold ph-key"></i>
+                    <span>Ввести ключ</span>
+                </button>
+                <button class="action-btn" id="extend-subscription-btn">
+                    <i class="ph-bold ph-clock-countdown"></i>
+                    <span>Продлить подписку</span>
+                </button>
             </div>
         </div>
     </section>
+
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Rockstar</h3>
-                <p>&copy; 2025 Rockstar Client. <br> Все права защищены</p>
+                <h3>Vanta Visual</h3>
+                <p>&copy; 2025 Vanta Visual. <br> Все права защищены</p>
             </div>
 
             <div class="footer-section">
@@ -214,9 +154,7 @@
             <div class="footer-section">
                 <h3>Контакты</h3>
                 <ul>
-                    <li><a href="https://t.me/rockclient">Телеграм</a></li>
-                    <li><a href="https://discord.gg/HstudsDCkH">Дискорд</a></li>
-                    <li><a href="https://vk.com/rockstarclient">ВКонтакте</a></li>
+                    <li><a href="https://t.me/AromatNews">Телеграм</a></li>
                 </ul>
             </div>
 
@@ -232,81 +170,18 @@
     <div id="key-popup-overlay" class="popup-overlay" style="display: none;">
         <div class="popup key-popup">
             <button class="popup-close" id="key-popup-close">&times;</button>
-            <div class="other">
-                <div class="popup-info">
-                    <div class="text">
-                        <h2 class="popup-title">Ввести ключ</h2>
-                        <p class="popup-price">Введите ваш ключ активации</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wrapper">
-                <input type="text" class="promo-input" placeholder="Введите ключ активации" id="key-activation-input">
-            </div>
-
+            <h2 class="popup-title">Ввести ключ</h2>
+            <p class="popup-price">Введите ваш ключ активации</p>
+            <input type="text" class="promo-input" placeholder="Введите ключ активации" id="key-activation-input">
             <button class="popup-buy" id="key-submit-btn">Активировать ключ</button>
-        </div>
-    </div>
-
-    <input type="file" id="avatar-file-input" accept="image/*" style="display: none;">
-
-    <div class="popup-overlay" id="avatar-modal-overlay" style="display: none;">
-        <div class="key-popup avatar-popup">
-
-            <div class="avatar-crop-section" id="avatar-crop-section">
-                <div class="crop-wrapper">
-                    <div class="crop-canvas-container">
-                        <canvas id="avatar-crop-canvas"></canvas>
-                        <div class="crop-selector" id="crop-selector">
-                            <div class="crop-handle top-left"></div>
-                            <div class="crop-handle top-right"></div>
-                            <div class="crop-handle bottom-left"></div>
-                            <div class="crop-handle bottom-right"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="avatar-buttons-column">
-                <button class="popup-button" id="avatar-save-btn">Сохранить</button>
-                <button class="popup-button" id="avatar-cancel-btn">Отмена</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="ram-popup-overlay" class="popup-overlay" style="display: none;">
-        <div class="popup key-popup">
-            <button class="popup-close" id="ram-popup-close">&times;</button>
-            <div class="other">
-                <div class="popup-info">
-                    <div class="text">
-                        <h2 class="popup-title">Изменить RAM</h2>
-                        <p class="popup-price">Укажите количество оперативной памяти в МБ</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wrapper">
-                <input type="number" class="promo-input" placeholder="Введите RAM в МБ (например, 2048)" id="ram-input" min="512" max="16384" step="512">
-            </div>
-
-            <button class="popup-buy" id="ram-submit-btn">Сохранить</button>
         </div>
     </div>
 
     <div id="twofa-popup-overlay" class="popup-overlay" style="display: none;">
         <div class="popup key-popup">
             <button class="popup-close" id="twofa-popup-close">&times;</button>
-            <div class="other">
-                <div class="popup-info">
-                    <div class="text">
-                        <h2 class="popup-title">Привязка Google Auth</h2>
-                        <p class="popup-price">Отсканируйте QR-код в приложении Google Authenticator</p>
-                    </div>
-                </div>
-            </div>
-
+            <h2 class="popup-title">Привязка Google Auth</h2>
+            <p class="popup-price">Отсканируйте QR-код в приложении Google Authenticator</p>
             <div class="twofa-qr-wrapper">
                 <img id="twofa-qr-img" src="" alt="QR Code">
             </div>
@@ -314,91 +189,10 @@
                 <span class="twofa-secret-label">Или введите код вручную:</span>
                 <span class="twofa-secret" id="twofa-secret"></span>
             </div>
-
-            <div class="wrapper">
-                <input type="text" class="promo-input" placeholder="Введите 6-значный код" id="twofa-code-input" maxlength="6">
-            </div>
-
+            <input type="text" class="promo-input" placeholder="Введите 6-значный код" id="twofa-code-input" maxlength="6">
             <button class="popup-buy" id="twofa-submit-btn">Подтвердить</button>
         </div>
     </div>
-
-    <div id="twofa-unlink-popup-overlay" class="popup-overlay" style="display: none;">
-        <div class="popup key-popup">
-            <button class="popup-close" id="twofa-unlink-popup-close">&times;</button>
-            <div class="other">
-                <div class="popup-info">
-                    <div class="text">
-                        <h2 class="popup-title">Отвязка Google Auth</h2>
-                        <p class="popup-price">Введите код из приложения для подтверждения</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wrapper">
-                <input type="text" class="promo-input" placeholder="Введите 6-значный код" id="twofa-unlink-code-input" maxlength="6">
-            </div>
-
-            <button class="popup-buy" id="twofa-unlink-submit-btn">Отвязать</button>
-        </div>
-    </div>
 </main>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        function toggleMenu(element) {
-            const menu = element.nextElementSibling;
-            const isCurrentlyOpen = menu.classList.contains('show');
-
-            closeAllMenus();
-
-            if (!isCurrentlyOpen) {
-                openMenu(menu);
-            }
-        }
-
-        function openMenu(menu) {
-            menu.classList.remove('hide');
-            menu.classList.add('show');
-            menu.style.animation = 'dropdownAppear 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards';
-        }
-
-        function closeAllMenus() {
-            const allMenus = document.querySelectorAll('.dropdown-menu');
-            allMenus.forEach(function(menu) {
-                menu.classList.remove('show');
-                menu.classList.add('hide');
-                menu.style.animation = '';
-            });
-        }
-
-        window.toggleMenu = toggleMenu;
-
-        document.addEventListener('click', function(event) {
-            const trigger = event.target.closest('.actions-trigger');
-            const menu = event.target.closest('.dropdown-menu');
-
-            if (!trigger && !menu) {
-                closeAllMenus();
-            }
-        });
-
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeAllMenus();
-            }
-        });
-
-        window.openDropdownMenu = function(triggerElement) {
-            const menu = triggerElement.nextElementSibling;
-            if (menu && menu.classList.contains('dropdown-menu')) {
-                closeAllMenus();
-                openMenu(menu);
-            }
-        };
-
-        window.closeAllDropdownMenus = closeAllMenus;
-    });
-</script>
 </body>
 </html>

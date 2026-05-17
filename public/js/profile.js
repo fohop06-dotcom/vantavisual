@@ -13,10 +13,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (data.success && data.data) {
       const user = data.data;
-      document.querySelectorAll('.name, .header-name').forEach(el => el.textContent = user.login);
-      document.querySelectorAll('.id').forEach(el => el.textContent = '#' + user.id);
+      document.querySelectorAll('.user-name, .header-name').forEach(el => el.textContent = user.login);
+      document.querySelectorAll('.id').forEach(el => el.textContent = user.id);
       document.querySelectorAll('.email').forEach(el => el.textContent = user.email);
-      document.querySelector('.role').textContent = 'Пользователь';
 
       if (user.created_at) {
         const date = new Date(user.created_at);
@@ -27,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.error('Failed to load profile:', e);
   }
 
-  document.querySelector('.quit')?.addEventListener('click', () => {
+  document.getElementById('logout-btn')?.addEventListener('click', () => {
     localStorage.removeItem('jwtToken');
     window.location.href = '/signin';
   });
@@ -36,5 +35,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     btn.addEventListener('click', () => {
       btn.closest('.popup-overlay').style.display = 'none';
     });
+  });
+
+  document.getElementById('enter-key-btn')?.addEventListener('click', () => {
+    document.getElementById('key-popup-overlay').style.display = 'flex';
+  });
+
+  document.getElementById('twofa-btn')?.addEventListener('click', () => {
+    document.getElementById('twofa-popup-overlay').style.display = 'flex';
   });
 });
