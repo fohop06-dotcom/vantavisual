@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="preload" href="/img/logo.png" as="image" fetchpriority="high">
+
+    <link rel="stylesheet" href="/css/header.css" data-critical>
+    <link rel="stylesheet" href="/css/main/profile.css" data-critical>
+    <link rel="stylesheet" href="/css/footer.css" data-async data-original-media="all" media="print" onload="this.onload=null;this.media='all'">
+    <link rel="stylesheet" href="/css/profile_adaptive.css" data-async data-original-media="all" media="print" onload="this.onload=null;this.media='all'">
+
+    <script defer src="/js/performance.js"></script>
+    <script defer src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+
+    <script defer src="/js/profile-anim.js"></script>
+    <script src="/js/auth.js"></script>
+    <script defer src="/js/auth-check.js"></script>
+    <script defer src="/js/header.js"></script>
+    <script defer src="/js/profile.js"></script>
+
+    <title>Vanta Visual</title>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="/" class="logo-text">
+            <img src="/img/logo.png" alt="" data-lazy="false" fetchpriority="high">Vanta Visual
+        </a>
+    </div>
+
+    <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/purchase">Покупка</a></li>
+        <li><a href="/faq">FAQ</a></li>
+    </ul>
+
+    <div class="header-actions">
+        <button onclick="location.href='/profile'" class="button">Профиль</button>
+        <button class="open-ul"><i class="ph-bold ph-list"></i></button>
+    </div>
+</header>
+
+<main>
+    <section class="profile-hero">
+        <h1 class="hero-title">
+            Улучшаем игру с<br>Vanta Visual
+        </h1>
+        <p class="hero-subtitle">Управляйте своим аккаунтом и настройками</p>
+    </section>
+
+    <section class="profile">
+        <div class="profile-card animate-on-scroll">
+            <div class="card-header">
+                <div class="user-info">
+                    <div class="avatar-large">
+                        <img src="/img/ava.jpg" alt="Avatar">
+                    </div>
+                    <div class="user-details">
+                        <h2 class="user-name"></h2>
+                        <p class="user-id"><i class="ph-bold ph-user-focus"></i> ID: <span class="id"></span></p>
+                        <span class="user-role">Пользователь</span>
+                    </div>
+                </div>
+                <button class="btn-logout" id="logout-btn">
+                    <i class="ph-bold ph-sign-out"></i> Выйти
+                </button>
+            </div>
+
+            <div class="card-body">
+                <div class="info-row">
+                    <div class="info-label">
+                        <i class="ph-bold ph-envelope"></i>
+                        <span>Почта</span>
+                    </div>
+                    <div class="info-value">
+                        <span class="email"></span>
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <div class="info-label">
+                        <i class="ph-bold ph-calendar"></i>
+                        <span>Дата регистрации</span>
+                    </div>
+                    <div class="info-value">
+                        <span class="creation"></span>
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <div class="info-label">
+                        <i class="ph-bold ph-shield-check"></i>
+                        <span>Google Authenticator</span>
+                    </div>
+                    <div class="info-value">
+                        <span class="twofa-status" id="twofa-status">Не привязан</span>
+                        <button class="btn-link" id="twofa-btn">Привязать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-card animate-on-scroll">
+            <div class="card-header">
+                <h3>Действия</h3>
+            </div>
+            <div class="card-actions">
+                <button class="action-btn" id="download-btn">
+                    <i class="ph-bold ph-cloud-arrow-down"></i>
+                    <span>Скачать лоадер</span>
+                </button>
+                <button class="action-btn" id="enter-key-btn">
+                    <i class="ph-bold ph-key"></i>
+                    <span>Ввести ключ</span>
+                </button>
+                <button class="action-btn" id="extend-subscription-btn">
+                    <i class="ph-bold ph-clock-countdown"></i>
+                    <span>Продлить подписку</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Vanta Visual</h3>
+                <p>&copy; 2025 Vanta Visual. <br> Все права защищены</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Платформа</h3>
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/purchase">Покупка</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Аккаунт</h3>
+                <ul>
+                    <li><a href="/signin">Вход</a></li>
+                    <li><a href="/signup">Регистрация</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <ul>
+                    <li><a href="https://t.me/AromatNews">Телеграм</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Соглашения</h3>
+                <ul>
+                    <li><a href="/license">Лицензионное соглашение</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div id="key-popup-overlay" class="popup-overlay" style="display: none;">
+        <div class="popup key-popup">
+            <button class="popup-close" id="key-popup-close">&times;</button>
+            <h2 class="popup-title">Ввести ключ</h2>
+            <p class="popup-price">Введите ваш ключ активации</p>
+            <input type="text" class="promo-input" placeholder="Введите ключ активации" id="key-activation-input">
+            <button class="popup-buy" id="key-submit-btn">Активировать ключ</button>
+        </div>
+    </div>
+
+    <div id="twofa-popup-overlay" class="popup-overlay" style="display: none;">
+        <div class="popup key-popup">
+            <button class="popup-close" id="twofa-popup-close">&times;</button>
+            <h2 class="popup-title">Привязка Google Auth</h2>
+            <p class="popup-price">Отсканируйте QR-код в приложении Google Authenticator</p>
+            <div class="twofa-qr-wrapper">
+                <img id="twofa-qr-img" src="" alt="QR Code">
+            </div>
+            <div class="twofa-secret-wrapper">
+                <span class="twofa-secret-label">Или введите код вручную:</span>
+                <span class="twofa-secret" id="twofa-secret"></span>
+            </div>
+            <input type="text" class="promo-input" placeholder="Введите 6-значный код" id="twofa-code-input" maxlength="6">
+            <button class="popup-buy" id="twofa-submit-btn">Подтвердить</button>
+        </div>
+    </div>
+</main>
+</body>
+</html>
