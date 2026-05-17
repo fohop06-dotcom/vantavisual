@@ -7,10 +7,20 @@ const jwt = require('jsonwebtoken');
 
 const app = express();
 const PORT = process.env.PORT || 8081;
+const path = require('path');
+
+// Serve static files (frontend)
+app.use((req, res, next) => {
+  if (req.path !== '/' && !req.path.includes('.') && !req.path.startsWith('/api/')) {
+    req.url = req.url + '.html';
+  }
+  next();
+});
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Middleware
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'https://rockstar.pub',
+  origin: process.env.FRONTEND_URL || '*',
   credentials: true
 }));
 app.use(express.json());
