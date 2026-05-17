@@ -10,6 +10,12 @@ const PORT = process.env.PORT || 8081;
 const path = require('path');
 
 // Serve static files (frontend)
+app.use((req, res, next) => {
+  if (!req.path.includes('.') && req.path !== '/api/v1/health') {
+    req.url = req.url + '.html';
+  }
+  next();
+});
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Middleware
