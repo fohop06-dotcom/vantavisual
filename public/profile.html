@@ -8,10 +8,10 @@
     <link rel="dns-prefetch" href="https://unpkg.com">
     <link rel="preload" href="/img/logo.png" as="image" fetchpriority="high">
 
-    <link rel="stylesheet" href="/css/main/profile.css" data-critical>
     <link rel="stylesheet" href="/css/header.css" data-critical>
-    <link rel="stylesheet" href="/css/profile_adaptive.css" data-async data-original-media="all" media="print" onload="this.onload=null;this.media='all'">
+    <link rel="stylesheet" href="/css/main/profile.css" data-critical>
     <link rel="stylesheet" href="/css/footer.css" data-async data-original-media="all" media="print" onload="this.onload=null;this.media='all'">
+    <link rel="stylesheet" href="/css/profile_adaptive.css" data-async data-original-media="all" media="print" onload="this.onload=null;this.media='all'">
 
     <script defer src="/js/performance.js"></script>
     <script defer src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
@@ -39,9 +39,7 @@
     </ul>
 
     <div class="header-actions">
-        <div class="highlight">
-            <span class="icon"><img class="avatar" src="/img/ava.jpg" alt=""></span><span class="header-name"></span>
-        </div>
+        <button onclick="location.href='/profile'" class="button">Профиль</button>
         <button class="open-ul"><i class="ph-bold ph-list"></i></button>
     </div>
 </header>

@@ -16,91 +16,10 @@ a {
   text-decoration: none;
 }
 
-/* Header */
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 40px;
-  background: rgba(10, 10, 15, 0.85);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.logo-text {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 20px;
-  font-weight: 700;
-  color: #fff;
-}
-
-.logo-text img {
-  height: 32px;
-}
-
-header ul {
-  display: flex;
-  list-style: none;
-  gap: 32px;
-}
-
-header ul li a {
-  color: #999;
-  font-size: 14px;
-  transition: color 0.2s;
-}
-
-header ul li a:hover {
-  color: #fff;
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.highlight {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 10px;
-  font-size: 13px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.highlight:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.avatar {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.open-ul {
-  display: none;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
-}
-
 /* Hero */
 .profile-hero {
   text-align: center;
-  padding: 80px 20px 40px;
+  padding: 120px 20px 40px;
   background: radial-gradient(ellipse at center, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
 }
 
@@ -468,20 +387,7 @@ header ul li a:hover {
   border-radius: 6px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  header {
-    padding: 12px 20px;
-  }
-
-  header ul {
-    display: none;
-  }
-
-  .open-ul {
-    display: block;
-  }
-
   .hero-title {
     font-size: 36px;
   }
@@ -489,29 +395,10 @@ header ul li a:hover {
   .card-actions {
     grid-template-columns: 1fr;
   }
-
-  .footer-content {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media (max-width: 480px) {
-  .footer-content {
-    grid-template-columns: 1fr;
-  }
-
-  .user-info {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .card-header {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .btn-logout {
-    width: 100%;
-    justify-content: center;
+  .hero-title {
+    font-size: 28px;
   }
 }
