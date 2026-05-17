@@ -332,7 +332,7 @@ main {
 }
 
 .animate-form > * {
-    opacity: 0;
+    opacity: 1;
 }
 
 .animate-form.is-visible > * {
