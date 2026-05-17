@@ -1,0 +1,95 @@
+.footer {
+    padding: 60px 0 40px;
+    margin-top: 120px;
+    width: 100vw;
+    border-top: 1px solid rgba(139, 92, 246, 0.1);
+    margin-left: calc(-50vw + 50%);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, transparent 0%, rgba(139, 92, 246, 0.03) 100%);
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--purple-primary) 50%, transparent 100%);
+    opacity: 0.3;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    padding: 0 40px;
+}
+
+.footer-section h3 {
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    letter-spacing: -0.3px;
+}
+
+.footer-section p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: var(--transition-fast);
+    display: inline-block;
+}
+
+.footer-section ul li a:hover {
+    color: var(--purple-light);
+    transform: translateX(4px);
+}
+
+@media (max-width: 1400px) {
+    .footer-content { padding: 0 30px; }
+}
+
+@media (max-width: 1180px) {
+    .footer-content { padding: 0 20px; }
+}
+
+@media (max-width: 760px) {
+    .footer-content {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer-section h3 { font-size: 18px; }
+    .footer-section ul li a { font-size: 16px; }
+}
+
+@media (max-width: 520px) {
+    .footer { padding: 40px 0 30px; }
+    .footer-content { padding: 0 16px; }
+}

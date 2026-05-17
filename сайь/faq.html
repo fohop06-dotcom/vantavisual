@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="preload" href="img/logo.png" as="image" fetchpriority="high">
+    <link rel="stylesheet" href="css/header.css" data-critical>
+    <link rel="stylesheet" href="css/footer.css" data-async data-original-media="all" media="print" onload="this.onload=null;this.media='all'">
+    <script defer src="js/performance.js"></script>
+    <script defer src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/header.js"></script>
+    <title>Rockstar 2.0 — FAQ</title>
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+body { background: #08080d; color: rgba(255,255,255,0.95); min-height: 100vh; }
+main { padding: 140px 12% 60px; max-width: 900px; margin: 0 auto; }
+.page-title { font-size: 48px; font-weight: 700; letter-spacing: -2px; margin-bottom: 16px; background: linear-gradient(135deg, #fff, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.page-subtitle { font-size: 18px; color: rgba(255,255,255,0.5); margin-bottom: 60px; }
+.faq-list { display: flex; flex-direction: column; gap: 16px; }
+.faq-item { background: rgba(18, 18, 30, 0.5); border: 1px solid rgba(139, 92, 246, 0.15); border-radius: 20px; padding: 24px; backdrop-filter: blur(20px); transition: all 0.3s ease; cursor: pointer; }
+.faq-item:hover { border-color: rgba(139, 92, 246, 0.3); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(139, 92, 246, 0.1); }
+.faq-question { font-size: 18px; font-weight: 600; display: flex; align-items: center; justify-content: space-between; }
+.faq-question i { transition: transform 0.3s ease; color: #8b5cf6; }
+.faq-item.active .faq-question i { transform: rotate(180deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; color: rgba(255,255,255,0.6); line-height: 1.6; }
+.faq-item.active .faq-answer { max-height: 200px; padding-top: 16px; }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="index.html" class="logo-text">
+            <img src="img/logo.png" alt="" data-lazy="false" fetchpriority="high">Rockstar
+        </a>
+    </div>
+    <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="purchase.html">Покупка</a></li>
+        <li><a href="faq.html" class="active">FAQ</a></li>
+    </ul>
+    <div class="header-actions">
+        <button onclick="location.href='/signup'" class="button">Регистрация</button>
+        <button class="open-ul"><i class="ph-bold ph-list"></i></button>
+    </div>
+</header>
+<main>
+    <h1 class="page-title">Частые вопросы</h1>
+    <p class="page-subtitle">Ответы на самые популярные вопросы о нашем клиенте</p>
+    <div class="faq-list">
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">Что такое Rockstar Client? <i class="ph-bold ph-caret-down"></i></div>
+            <div class="faq-answer">Rockstar Client — это современный клиент для Minecraft с уникальными функциями, включая Dynamic Island, управление музыкой, моды и многое другое.</div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">Как установить клиент? <i class="ph-bold ph-caret-down"></i></div>
+            <div class="faq-answer">После покупки вы получите доступ к скачиванию клиента. Просто запустите установщик и следуйте инструкциям.</div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">Какие серверы поддерживаются? <i class="ph-bold ph-caret-down"></i></div>
+            <div class="faq-answer">Наш клиент поддерживает большинство популярных серверов Minecraft версии 1.21.4. Список совместимых серверов постоянно расширяется.</div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">Как связаться с поддержкой? <i class="ph-bold ph-caret-down"></i></div>
+            <div class="faq-answer">Вы можете связаться с нами через Telegram, Discord или ВКонтакте. Ссылки указаны в футере сайта.</div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-question">Есть ли возврат средств? <i class="ph-bold ph-caret-down"></i></div>
+            <div class="faq-answer">Возврат средств возможен в течение 24 часов после покупки, если клиент не был использован. Обратитесь в поддержку для оформления возврата.</div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Rockstar</h3>
+                <p>© 2025 Rockstar Client. <br> Все права защищены</p>
+            </div>
+            <div class="footer-section">
+                <h3>Платформа</h3>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="purchase.html">Покупка</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Аккаунт</h3>
+                <ul>
+                    <li><a href="signin.html">Вход</a></li>
+                    <li><a href="signup.html">Регистрация</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <ul>
+                    <li><a href="https://t.me/rockclient">Телеграм</a></li>
+                    <li><a href="https://discord.gg/HstudsDCkH">Дискорд</a></li>
+                    <li><a href="https://vk.com/rockstarclient">ВКонтакте</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Соглашения</h3>
+                <ul>
+                    <li><a href="license.html">Лицензионное соглашение</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</main>
+</body>
+</html>
