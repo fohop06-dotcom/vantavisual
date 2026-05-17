@@ -11,7 +11,7 @@ const path = require('path');
 
 // Serve static files (frontend)
 app.use((req, res, next) => {
-  if (!req.path.includes('.') && req.path !== '/api/v1/health') {
+  if (req.path !== '/' && !req.path.includes('.') && !req.path.startsWith('/api/')) {
     req.url = req.url + '.html';
   }
   next();
